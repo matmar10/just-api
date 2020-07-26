@@ -205,7 +205,8 @@ class Suite extends _events2.default {
                 port: suiteConfigData.port,
                 scheme: suiteConfigData.scheme,
                 base_path: suiteConfigData.base_path,
-                read_timeout: suiteConfigData.read_timeout
+                read_timeout: suiteConfigData.read_timeout,
+                common_headers: suiteConfigData.common_headers
             };
 
             const configContext = {};
@@ -236,6 +237,7 @@ class Suite extends _events2.default {
             this.port = configuration.port;
             this.base_path = configuration.base_path || '';
             this.read_timeout = configuration.read_timeout || 60000;
+            suiteConfigData.common_headers = configuration.common_headers || [];
         } else {
             this.scheme = suiteConfigData.scheme;
             this.host = suiteConfigData.host;
@@ -466,7 +468,7 @@ class Suite extends _events2.default {
         return loopItems;
     }
 
-    /* 
+    /*
     options can include host, port, scheme, path_params, query_params, headers,
     read_timeout, in case of body requirements ( body, form_data, form)
     validateResponse option will enable/disable response validation
