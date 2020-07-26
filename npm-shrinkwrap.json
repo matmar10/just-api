@@ -1,6 +1,6 @@
 {
   "name": "just-api",
-  "version": "1.2.6-pr.1",
+  "version": "1.2.6-pr.2",
   "dependencies": {
     "ajv": {
       "version": "5.5.2",
