@@ -2,7 +2,6 @@
 .vscode/
 *.DS_Store
 
-src/
 local/
 test/api/node_modules
 test/api/db.json
